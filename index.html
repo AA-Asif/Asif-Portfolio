@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Al Asif Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --text: #c9d1d9;
+            --accent: #00f5c4;
+        }
+
+        .light-mode {
+            --bg: #ffffff;
+            --card: #f1f1f1;
+            --text: #111;
+            --accent: #0077ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.3s;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: var(--card);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #30363d;
+        }
+
+        nav h2 {
+            color: var(--accent);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text);
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        .toggle-btn {
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* HERO */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        header img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            object-fit: cover;
+            box-shadow: 0 0 25px var(--accent);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+        }
+
+        header p {
+            color: var(--accent);
+            margin-top: 10px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--accent);
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #30363d;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(0, 245, 196, 0.3);
+        }
+
+        /* SKILLS */
+        .skills span {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 8px 8px 0 0;
+            border-radius: 20px;
+            background: #21262d;
+            border: 1px solid var(--accent);
+            font-size: 13px;
+        }
+
+        /* GRID */
+        .project-grid,
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* CONTACT */
+        #contact a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--card);
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Asif</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="toggle-btn" onclick="toggleMode()">Light Mode</button>
+    </nav>
+
+    <header id="home">
+        <img src="profile.jpg" alt="Abdullah Al Asif">
+        <h1>Abdullah Al Asif</h1>
+        <p>Cyber Security Student || CS Student || Networking || CTF Player || Programmer || Jr Penetration Tester ||
+            Bug Hunter</p>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            Hi there! This is Asif. Currently, I am an undergraduate student of Diploma in Computer Science Engineering
+            from Bangladesh Rajshahi Polytechnic Institute . I am very much enthusiastic about Cyber Security and
+            Ethical Hacking . Also I enthusiastically exploring new technologies eager to do.
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+            <h3>Diploma in Computer Science Engineering</h3>
+            <p>Rajshahi Polytechnic Institute</p>
+            <p>Current Student</p>
+            <br>
+            <h3>SSC - GPA 5.00</h3>
+            <p>Chamur AM High School</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="card skills">
+            <span>Networking</span>
+            <span>Cyber Security</span>
+            <span>Ethical Hacking</span>
+            <span>Bug Hunting</span>
+            <span>Python</span>
+            <span>Penetration Testing</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Web Vulnerability Scanner</h3>
+                <p>Python-based tool to detect common web vulnerabilities.</p>
+            </div>
+            <div class="card">
+                <h3>CTF Writeups</h3>
+                <p>Detailed walkthroughs of solved CTF challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2 class="section-title">Blog</h2>
+        <div class="blog-grid">
+            <div class="card">
+                <h3>How I Found My First Bug</h3>
+                <p>My First Bug 😊
+
+                    When I first started programming, I thought I was doing everything right. But when I ran my code, I
+                    saw that something was wrong. 😅
+
+                    I started checking my code, but I couldn't find anything. Then I went to a friend and showed him my
+                    code. He looked at it and said, "You've missed a semicolon!" 🤦‍♂️
+
+                    I checked my code again and saw that he was right. I added the semicolon and ran my code again. This
+                    time, everything worked fine! 🎉
+
+                    That was my first bug. I learned a lot from this experience, like:
+
+                    Always check your code.
+                    Don't forget semicolons 😅.
+                    Ask your friends for help. 🤝
+                    That's the story of my first bug. What's your first bug story? 😊</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="card">
+            <p>Email: <a href="mailto:mdabdullahalasif@yahoo.com">mdabdullahalasif@yahoo.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/md-asif83/" target="_blank">md-asif83</a></p>
+            <p>GitHub: <a href="https://github.com/AA-Asif" target="_blank">AA-Asif</a></p>
+            <p>Phone: 01572916860</p>
+            <p>Location: Bogura, Rajshahi, Bangladesh</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Abdullah Al Asif
+    </footer>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("light-mode");
+            const btn = document.querySelector(".toggle-btn");
+            btn.innerText = document.body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
+        }
+    </script>
+
+</body>
+
+</html>
